@@ -6,7 +6,7 @@ type ItemCardProps = { item: Item };
 
 const ItemCard = ({ item }: ItemCardProps) => {
   return (
-    <li>
+    <li className="border rounded p-4 hover:shadow-lg">
       <div>
         <Image
           src={`https://ddragon.leagueoflegends.com/cdn/15.5.1/img/item/${item.image.full}`}

@@ -5,9 +5,8 @@ import ItemCard from "../ItemCard";
 type ItemListProps = { items: Item[] };
 
 const ItemList = ({ items = [] }: ItemListProps) => {
-    console.log("items", items)
   return (
-    <ul>
+    <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
       {items.map((item) => (
         <ItemCard key={item.name} item={item} />
       ))}
