@@ -8,7 +8,13 @@ const ItemCard = ({ item }: ItemCardProps) => {
   return (
     <li>
       <div>
-        <Image src={item.image.full} width={48} height={48} alt={item.name} />
+        <Image
+          src={`https://ddragon.leagueoflegends.com/cdn/15.5.1/img/item/${item.image.full}`}
+          width={80}
+          height={80}
+          alt={item.name}
+          className="mx-auto"
+        />
       </div>
       <h3>{item.name}</h3>
       <p>가격: {item.gold.base}</p>

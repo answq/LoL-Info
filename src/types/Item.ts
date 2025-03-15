@@ -2,6 +2,7 @@ export interface Item {
   name: string;
   description: string;
   plaintext: string;
+  imageUrl: string;
   image: {
     full: string;
     sprite: string;
