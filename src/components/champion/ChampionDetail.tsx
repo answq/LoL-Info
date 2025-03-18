@@ -24,9 +24,9 @@ const ChampionDetail = ({ version, championDetail }: ChampionDetailProps) => {
           />
           <span className="text-red-400 mt-4">{championDetail.lore}</span>
 
-          <li className="mt-6">
+          <div className="space-y-3 text-lg text-red-500 ">
             <h3 className=" text-red-500  text-xl font-semibold mt-4">스탯</h3>
-            <ul className="list-disc list-inside">
+            <ul className="flex flex-col text-lg ">
               <span className="font-semibold">공격력</span>
               <span>{championDetail.info.attack}</span>
               <span className="font-semibold">방어력</span>
@@ -36,7 +36,7 @@ const ChampionDetail = ({ version, championDetail }: ChampionDetailProps) => {
               <span className="font-semibold">난이도</span>
               <span>{championDetail.info.difficulty}</span>
             </ul>
-          </li>
+          </div>
         </div>
       </div>
     </main>
