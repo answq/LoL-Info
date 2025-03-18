@@ -1,0 +1,42 @@
+import { apiUrl } from "@/app/api/rotation/route";
+import { apiKey } from "@/app/api/rotation/route";
+import { type ChampionRotation } from "@/types/ChampionRotation";
+import { getChampionList } from "./serverApi";
+import { type Champion } from "@/types/Champion";
+
+export const getChampionRotation = async () => {
+  try {
+    if (!apiKey) {
+      throw new Error("api key undefind");
+    }
+    const res = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "X-Riot-Token": apiKey,
+      },
+    });
+    if (!res.ok) {
+      throw new Error("server error");
+    }
+    const data: ChampionRotation = await res.json();
+    const freeChampionIds = data.freeChampionIds;
+    //챔피언 정보 가져오기
+    const champions = await getChampionList();
+
+    //무료 챔피언 id와 가져온 챔피언 정보 비교하기
+    const freeChampionList = freeChampionIds.map((id) => {
+      const champion = Object.values(champions).find(
+        (champ: Champion) => champ.key === id.toString()
+      );
+      if (champion) {
+        return champion;
+      }
+      return null;
+    });
+
+    return Response.json(freeChampionList);
+  } catch (error) {
+    console.log(error);
+    return Response.json({ message: error });
+  }
+};

@@ -1,5 +1,4 @@
 //SSG
-
 import ItemList from "@/components/item/ItemList";
 import { type Item } from "@/types/Item";
 import { getItemList } from "@/utils/serverApi";
