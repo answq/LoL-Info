@@ -21,7 +21,7 @@ const HomePage = () => {
         >
           <Image
             src={
-              "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fiddlesticks_8.jpg"
+              "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_2.jpg"
             }
             width={400}
             height={300}
@@ -35,7 +35,7 @@ const HomePage = () => {
         >
           <Image
             src={
-              "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fiddlesticks_8.jpg"
+              "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_2.jpg"
             }
             width={400}
             height={300}
@@ -49,7 +49,7 @@ const HomePage = () => {
         >
           <Image
             src={
-              "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fiddlesticks_8.jpg"
+              "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_4.jpg"
             }
             width={400}
             height={300}
