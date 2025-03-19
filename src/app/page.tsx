@@ -14,7 +14,7 @@ const HomePage = () => {
       <p className="text-center mt-4 p-5">
         Riot Games API를 활용하여 챔피언과 아이템 정보를 제공합니다
       </p>
-      <div className="mt-[40px] flex flex-col gap-4 p-2">
+      <div className="mt-[40px] flex flex-col gap-4 p-2 justify-center items-center md:flex-row">
         <Link
           href={"/champions"}
           className="flex flex-col space-y-3 justify-center items-center text-orange-400 font-bold"
