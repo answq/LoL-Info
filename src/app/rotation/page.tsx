@@ -25,7 +25,10 @@ const Rotationpage = () => {
   if (isError) return <div>Error: {error.message}</div>;
   console.log(freeChampionList);
   return (
-    <div>
+    <div className="container mt-10 mx-auto">
+      <h2 className="text-2xl font-bold mb-4 text-red-500">
+        챔피언 로테이션(이번 주 무료로 플레이 할 수 있어요!)
+      </h2>
       <ChampionList champions={freeChampionList} />
     </div>
   );

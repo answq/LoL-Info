@@ -6,9 +6,9 @@ type ChampionDetailProps = { version: string; championDetail: ChampionDetail };
 
 const ChampionDetail = ({ version, championDetail }: ChampionDetailProps) => {
   return (
-    <main className="container mx-auto mt-10">
+    <main className="container mx-auto">
       <div className="max-w-3xl mx-auto">
-        <div className="flex flex-col gap-4">
+        <div className="className=grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-10 gap-4">
           <span className="text-4xl font-bold text-red-500 mb-4">
             {championDetail.name}
           </span>

@@ -8,7 +8,7 @@ const ItemPage = async () => {
   const items: Item[] = await getItemList();
   return (
     <main className="container mt-10 mx-auto">
-      <h2 className="text-3xl font-bold mb-4">아이템 목록</h2>
+      <h2 className="text-2xl font-bold mb-4 text-red-500">아이템 목록</h2>
       <div>
         <ItemList items={items} />
       </div>
