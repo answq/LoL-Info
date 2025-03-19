@@ -1,8 +1,10 @@
-import { apiUrl } from "@/app/api/rotation/route";
-import { apiKey } from "@/app/api/rotation/route";
 import { type ChampionRotation } from "@/types/ChampionRotation";
 import { getChampionList } from "./serverApi";
 import { type Champion } from "@/types/Champion";
+
+const apiKey = process.env.RIOT_API_KEY;
+const apiUrl =
+  "https://br1.api.riotgames.com/lol/platform/v3/champion-rotations";
 
 export const getChampionRotation = async () => {
   try {

@@ -2,8 +2,8 @@ import { type Champion } from "@/types/Champion";
 import { type ChampionRotation } from "@/types/ChampionRotation";
 import { getChampionList } from "@/utils/serverApi";
 
-export const apiKey = process.env.RIOT_API_KEY;
-export const apiUrl =
+const apiKey = process.env.RIOT_API_KEY;
+const apiUrl =
   "https://br1.api.riotgames.com/lol/platform/v3/champion-rotations";
 
 //챔피언 로테이션 정보 가져오기
